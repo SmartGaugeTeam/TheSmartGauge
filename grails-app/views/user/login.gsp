@@ -136,15 +136,17 @@
     </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" style="background-color: #d1e0e0;">
     <div class="row">
         <div class="col-sm-12 col-md-12">
-            %{--<h1 class="page-header">Dashboard</h1>--}%
             <div class="row placeholders" >
-                <asset:image src="black.jpg" style="width: 100%;"/>
+                %{--<asset:image src="black.jpg" style="width: 100%;"/>--}%
+                <h2 style="background-color: red;width: 50%;margin-left: 5%;color: white;font-weight: 700;">REPRESENTATION STARTS WITH YOU</h2>
+                <h2 style="background-color: black;font-family: cursive;width: 50%;margin-left: 5%;color: white;font-weight: 700;">The Fastest Way To Make Your Opinion Count</h2>
+                <asset:image src="smart-slide-plain-copy.png" style="width: 40%;margin-left: 50%"/>
             </div>
 
-            <div class="row placeholders">
+            %{--<div class="row placeholders">
                 <div class="col-xs-6 col-sm-3 placeholder">
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
@@ -153,12 +155,26 @@
                 </div>
                 <div class="col-xs-6 col-sm-3 placeholder">
                 </div>
-            </div>
+            </div>--}%
 
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="container-fluid" style="background-color: #94b8b8;">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="row placeholders" >
+                %{--<asset:image src="black.jpg" style="width: 100%;"/>--}%
+                <h4 style="margin-left: 5%;color: white;">Do you have concerns? Need us to look into it and help you get the right response? <a href="http://www.thesmartgauge.net/concerns/" style="color: red;">Read Details</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 
 <!-- Bootstrap core JavaScript
     ================================================== -->

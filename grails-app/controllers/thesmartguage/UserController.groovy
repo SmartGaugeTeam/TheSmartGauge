@@ -17,6 +17,10 @@ class UserController {
         render(view: 'aboutTsg')
     }
 
+    def test(){
+        render (view: 'test')
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model: [userInstanceCount: User.count()]
