@@ -163,16 +163,30 @@
 </div>
 
 
-<div class="container-fluid" style="background-color: #94b8b8;">
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="row placeholders" >
-                %{--<asset:image src="black.jpg" style="width: 100%;"/>--}%
-                <h4 style="margin-left: 5%;color: white;">Do you have concerns? Need us to look into it and help you get the right response? <a href="http://www.thesmartgauge.net/concerns/" style="color: red;">Read Details</a></h4>
+    <div class="container-fluid" style="background-color: #94b8b8;">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="row placeholders" >
+                    %{--<asset:image src="black.jpg" style="width: 100%;"/>--}%
+                    <h4 style="margin-left: 5%;color: white;">Do you have concerns? Need us to look into it and help you get the right response? <a href="http://www.thesmartgauge.net/concerns/" style="color: red;">Read Details</a></h4>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="container-fluid" style="background-color: #94b8b8;">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="row placeholders" >
+                    %{--<asset:image src="black.jpg" style="width: 100%;"/>--}%
+                    <h4 style="margin-left: 5%;color: white;">Do you have concerns? Need us to look into it and help you get the right response? <a href="http://www.thesmartgauge.net/concerns/" style="color: red;">Read Details</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 </div>
 
 
@@ -190,7 +204,7 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
-
+                Test
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
