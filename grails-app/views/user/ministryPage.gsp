@@ -52,7 +52,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FEDERAL <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="height: 250px;overflow: scroll;" >
-                        <li><a href="#">Minister of Defence</a></li>
+                        <li><a href="../home/ministryPage">Minister of Defence</a></li>
                         <li><a href="#">Minister of Education</a></li>
                         <li><a href="#">Minister of Environment</a></li>
                         <li><a href="#">Minister of Finance</a></li>
@@ -81,7 +81,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">STATE <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="height: 250px;overflow: scroll;">
-                        <li><a href="#">Abia</a></li>
+                        <li><a href="../home/statePage">Abia</a></li>
                         <li><a href="#">Adamawa</a></li>
                         <li><a href="#">Akwa Ibom</a></li>
                         <li><a href="#">Anambra State</a></li>
@@ -138,36 +138,54 @@
 
 <div  style="background-image: url(../images/home_bg.jpg);">
 
-    <div class="container-fluid" style="height: 350px;">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" >
                 <div class="row" >
                     <div class="col-md-12 col-md-offset-1">
-                        <h2 style="float: left;"> About TSG</h2>
+                        <h2 style="float: left;"> Minister of Defence</h2>
                     </div>
                 </div>
                 <hr size="30">
-                <h4>We are an independent private company with the aim of creating a platform where Nigerian citizens can voice their opinion and objectively evaluate the performance of their elected officials (post-election) using a simple rating matrix. We believe better leaders are those that listen  to it peoples complains and opinions and those who will do what it takes to better the lives of its citizens while living up to promises made during election campaign.</h4>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div class="row">
-            <div class="col-md-12" style="background-color: #0f3d3d;opacity: 0.9; padding-bottom: 2%;">
-                <div class="row placeholders" >
-                    <div class="col-md-3" style="color: white;">
-                        <h5 style="float: left;">Our Contact</h5></br>
-                        <h6 style="float: left;">E-mail: contact@thesmartgauge.net</h6></br>
-                        <a style="float: left;" href="contactus">Contact Form</a>
+            <div class="col-sm-12 col-md-12" >
+                <div class="row" >
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-2">
+                        <img src="../images/governor.jpg" style="height: 200px;width: 200px">
                     </div>
-                    <div class="col-md-3" style="color: white;">
-                        <h5>Latest Tweets</h5>
-                    </div>
-                    <div class="col-md-6" style="color: white;">
-                        <h5>Latest News</h5>
+                    <div class="col-md-1">&nbsp;</div>
+                    <div class="col-md-7"  style="background-color: #e7e4e4; opacity: 0.9; color: black;">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#home">&nbsp;</a></li>
+                            <li><a data-toggle="tab" href="#menu1">Bio</a></li>
+                            <li><a data-toggle="tab" href="#menu2">Mandate</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <h3>Dan Ali</h3>
+                                <p>Ministry of Defence</p>
+                            </div>
+                            <div id="menu1" class="tab-pane fade">
+                                <p>Mansur Dan Ali was born August 25 1959 is a retired Nigerian Army Brigadier General and current Minister of Defence of Nigeria appointed by President Muhammadu Buhari in November 2015.
+                                He attended Birnin Magaji Town Primary School (1966 -1972) for his elementary education and Government Secondary School, Shinkafi (1972-1977) for his secondary education. He received his Higher National Diploma (HND) in Photogrammetric and Surveying from Kaduna Polytechnic (1977-1982) and possesses a Master’s Degrees in Public Policy and Administration (MPPA) from Bayero University Kano (2004-2005) and a Master’s Degree in Security Studies from the Bangladesh University of Professionals (2009)
+                                Dan Ali was commissioned as a 2nd Lieutenant in the Nigerian Army in 1984 through the Short Service Commission at the Nigerian Defence Academy. Dan-Ali has served in different command and staff capacities, some of which include commanding the Nigerian contingent supporting the United Nations Africa Hybrid Mission in Sudan. Dan Ali was on the Directing Staff of the Armed Forces Command and Staff College, Jaji from 2003 -2005 and was Chief Instructor (CI) at the Nigerian Defence Academy in 2010. He was also Acting Director Military Training before getting posted to the Ministry of Defence’s Logistics Department as Deputy Director. He retired from the Nigerian Army on August 30, 2013.</p>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                                <p>Vision
+                                “In recognition of the challenges of the millennium, a Military sector with modernized equipment, well-trained in all aspects of military operations, fully professionalized, compact and mobile with adequate equipment, fire-power and communications, capable of fulfilling its constitutional responsibilities and performing its international peace-keeping role proudly and efficiently.”
+                                Mission
+                                “To provide administrative and support services, timely and effectively to enable the Armed Forces of the Federal Republic of Nigeria to build and maintain a modern, compact, strong, professional, mission-capable and mission-ready Armed Forces, for the defence of National territory maritime interest, airspace and the protection and defence of the constitution of the Federal Republic of Nigeria, and to contribute to peace-making and peace-keeping duties worldwide under sub-regional and global organizations of which Nigeria is a member.”</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <hr size="30">
             </div>
         </div>
     </div>

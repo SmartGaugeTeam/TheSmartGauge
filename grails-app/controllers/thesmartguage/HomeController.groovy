@@ -1,13 +1,15 @@
 package thesmartguage
 
-
-import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
-@Transactional(readOnly = true)
-class UserController {
+import static org.springframework.http.HttpStatus.CREATED
+import static org.springframework.http.HttpStatus.NOT_FOUND
+import static org.springframework.http.HttpStatus.NO_CONTENT
+import static org.springframework.http.HttpStatus.OK
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+class HomeController {
+
+    def index() {}
 
     def templateModel(){
 
@@ -155,4 +157,5 @@ class UserController {
             '*' { render status: NOT_FOUND }
         }
     }
+
 }

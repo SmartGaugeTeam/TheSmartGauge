@@ -51,6 +51,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        runtime 'mysql:mysql-connector-java:5.1.16'
+//        runtime 'mysql:mysql-connector-java:5.1.29'
+//        compile "org.grails.plugins:mysql-connectorj:5.1.22.1"
     }
 
     plugins {
@@ -61,6 +64,8 @@ grails.project.dependency.resolution = {
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.6"
+        compile "org.grails.plugins:mysql-connectorj:5.1.22.1"
+//        compile "org.grails.plugins:mysql-connectorj:5.1.22.1"
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.5.5" // or ":hibernate:3.6.10.17"

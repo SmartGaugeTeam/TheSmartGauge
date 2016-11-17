@@ -13,7 +13,7 @@ class User {
     String LGA
     Date dob
     String webSite
-    Role role
+    Role roleInstance
 
     static constraints = {
     }

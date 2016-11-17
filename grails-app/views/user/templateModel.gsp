@@ -20,6 +20,9 @@
     <!-- Custom styles for this template -->
     <asset:stylesheet href="dashboard.css" rel="stylesheet"/>
 
+    <asset:javascript src="jquery.js"/>
+    <asset:javascript src="pulsone.js"/>
+    <asset:javascript src="smartGauge.js"/>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><asset:javascript src="ie8-responsive-file-warning.js"></asset:javascript><![endif]-->
     <asset:javascript src="ie-emulation-modes-warning.js"/>
@@ -29,6 +32,81 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+        $(document).ready(function() {
+            jQuery.ajax({
+                cache: false,
+                url:    baseURL+'/user/homeTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    $('#activeTemplate').html(response);
+                }
+            });
+        });
+
+        function loadHomePage(){
+            jQuery.ajax({
+                cache: false,
+                url:    baseURL+'/user/homeTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+
+        function loadAboutTSG(){
+            jQuery.ajax({
+                cache: false,
+                url:    baseURL+'/user/aboutTsgTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+        function loadMinisterPage(mstName){
+            jQuery.ajax({
+               cache: false,
+               url: baseURL+'/user/ministerTemplate?mstName='+mstName,
+               contentType: 'application/json; charset=utf-8',
+                success: function(response){
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+        function loadConcernsTemplate(){
+            jQuery.ajax({
+                cache: false,
+                url: baseURL+'/user/concernsTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response){
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+        function loadContactsTemplate(){
+            jQuery.ajax({
+                cache: false,
+                url: baseURL+'/user/contactsTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response){
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+
+        function loadStatePage(){
+            jQuery.ajax({
+                cache: false,
+                url: baseURL+'/user/stateTemplate',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response){
+                    $('#activeTemplate').html(response);
+                }
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -47,80 +125,80 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login">HOME</a></li>
-                <li><a href="aboutTsg">ABOUT TSG</a></li>
+                <li><a href="#" onclick="loadHomePage()">HOME</a></li>
+                <li><a href="#" onclick="loadAboutTSG();">ABOUT TSG</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FEDERAL <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="height: 250px;overflow: scroll;" >
-                        <li><a href="#">Minister of Defence</a></li>
-                        <li><a href="#">Minister of Education</a></li>
-                        <li><a href="#">Minister of Environment</a></li>
-                        <li><a href="#">Minister of Finance</a></li>
-                        <li><a href="#">Minister of Foreign Affairs</a></li>
-                        <li><a href="#">Minister of Health</a></li>
-                        <li><a href="#">Minister of Information</a></li>
-                        <li><a href="#">Minister of Interior</a></li>
-                        <li><a href="#">Minister of Justice &amp; Attorney-General</a></li>
-                        <li><a href="#">Minister of Niger Delta</a></li>
-                        <li><a href="#">Minister of Science and Technology</a></li>
-                        <li><a href="#">Minister of Solid Minerals</a></li>
-                        <li><a href="#">Minister of State, Aviation</a></li>
-                        <li><a href="#">Minister of Power, Works and Housing</a></li>
-                        <li><a href="#">Minister of Budget &amp; National Planning</a></li>
-                        <li><a href="#">Minister of Trade, Investment &amp; Industry</a></li>
-                        <li><a href="#">Minister of Communication</a></li>
-                        <li><a href="#">Minister FCT</a></li>
-                        <li><a href="#">Minister of Agriculture</a></li>
-                        <li><a href="#">Minister of Labour &amp; Employment</a></li>
-                        <li><a href="#">Minister of Transportation</a></li>
-                        <li><a href="#">Minister for Youth and Sports</a></li>
-                        <li><a href="#">Minister of Water Resources</a></li>
-                        <li><a href="#">Minister of Women Affairs</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MD');">Minister of Defence</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('ME');">Minister of Education</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MEV');">Minister of Environment</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MF');">Minister of Finance</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MFA');">Minister of Foreign Affairs</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MH');">Minister of Health</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MI');">Minister of Information</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MIT');">Minister of Interior</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MJ');">Minister of Justice &amp; Attorney-General</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MN');">Minister of Niger Delta</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MST');">Minister of Science and Technology</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MSM');">Minister of Solid Minerals</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MSA');">Minister of State, Aviation</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MP');">Minister of Power, Works and Housing</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MB');">Minister of Budget &amp; National Planning</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MTI');">Minister of Trade, Investment &amp; Industry</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MC');">Minister of Communication</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MFCT');">Minister FCT</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MA');">Minister of Agriculture</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('ML');">Minister of Labour &amp; Employment</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MT');">Minister of Transportation</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MYS');">Minister for Youth and Sports</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MWR');">Minister of Water Resources</a></li>
+                        <li><a href="#" onclick="loadMinisterPage('MWA');">Minister of Women Affairs</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">STATE <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="height: 250px;overflow: scroll;">
-                        <li><a href="#">Abia</a></li>
-                        <li><a href="#">Adamawa</a></li>
-                        <li><a href="#">Akwa Ibom</a></li>
-                        <li><a href="#">Anambra State</a></li>
-                        <li><a href="#">Bauchi</a></li>
-                        <li><a href="#">Bayelsa</a></li>
-                        <li><a href="#">Benue</a></li>
-                        <li><a href="#">Borno</a></li>
-                        <li><a href="#">Cross River</a></li>
-                        <li><a href="#">Delta</a></li>
-                        <li><a href="#">Ebonyi</a></li>
-                        <li><a href="#">Edo</a></li>
-                        <li><a href="#">Ekiti</a></li>
-                        <li><a href="#">Enugu</a></li>
-                        <li><a href="#">Gombe</a></li>
-                        <li><a href="#">Imo</a></li>
-                        <li><a href="#">Jigawa</a></li>
-                        <li><a href="#">Kaduna</a></li>
-                        <li><a href="#">Kano</a></li>
-                        <li><a href="#">Katsina</a></li>
-                        <li><a href="#">Kebbi</a></li>
-                        <li><a href="#">Kogi</a></li>
-                        <li><a href="#">Kwara</a></li>
-                        <li><a href="#">Lagos</a></li>
-                        <li><a href="#">Nasarawa</a></li>
-                        <li><a href="#">Niger</a></li>
-                        <li><a href="#">Ogun</a></li>
-                        <li><a href="#">Ondo</a></li>
-                        <li><a href="#">Osun</a></li>
-                        <li><a href="#">Oyo</a></li>
-                        <li><a href="#">Plateau</a></li>
-                        <li><a href="#">Rivers</a></li>
-                        <li><a href="#">Sokoto</a></li>
-                        <li><a href="#">Taraba</a></li>
-                        <li><a href="#">Yobe</a></li>
-                        <li><a href="#">Zamfara</a></li>
+                        <li><a href="#" onclick="loadStatePage('AB');">Abia</a></li>
+                        <li><a href="#" onclick="loadStatePage('AD');">Adamawa</a></li>
+                        <li><a href="#" onclick="loadStatePage('AI');">Akwa Ibom</a></li>
+                        <li><a href="#" onclick="loadStatePage('AS');">Anambra State</a></li>
+                        <li><a href="#" onclick="loadStatePage('BA');">Bauchi</a></li>
+                        <li><a href="#" onclick="loadStatePage('BY');">Bayelsa</a></li>
+                        <li><a href="#" onclick="loadStatePage('BE');">Benue</a></li>
+                        <li><a href="#" onclick="loadStatePage('BO');">Borno</a></li>
+                        <li><a href="#" onclick="loadStatePage('CR');">Cross River</a></li>
+                        <li><a href="#" onclick="loadStatePage('De');">Delta</a></li>
+                        <li><a href="#" onclick="loadStatePage('EB');">Ebonyi</a></li>
+                        <li><a href="#" onclick="loadStatePage('ED');">Edo</a></li>
+                        <li><a href="#" onclick="loadStatePage('EK');">Ekiti</a></li>
+                        <li><a href="#" onclick="loadStatePage('EN');">Enugu</a></li>
+                        <li><a href="#" onclick="loadStatePage('GO');">Gombe</a></li>
+                        <li><a href="#" onclick="loadStatePage('IM');">Imo</a></li>
+                        <li><a href="#" onclick="loadStatePage('JI');">Jigawa</a></li>
+                        <li><a href="#" onclick="loadStatePage('KA');">Kaduna</a></li>
+                        <li><a href="#" onclick="loadStatePage('KN');">Kano</a></li>
+                        <li><a href="#" onclick="loadStatePage('KT');">Katsina</a></li>
+                        <li><a href="#" onclick="loadStatePage('KB');">Kebbi</a></li>
+                        <li><a href="#" onclick="loadStatePage('KO');">Kogi</a></li>
+                        <li><a href="#" onclick="loadStatePage('KW');">Kwara</a></li>
+                        <li><a href="#" onclick="loadStatePage('LA');">Lagos</a></li>
+                        <li><a href="#" onclick="loadStatePage('NA');">Nasarawa</a></li>
+                        <li><a href="#" onclick="loadStatePage('NI');">Niger</a></li>
+                        <li><a href="#" onclick="loadStatePage('OG');">Ogun</a></li>
+                        <li><a href="#" onclick="loadStatePage('ON');">Ondo</a></li>
+                        <li><a href="#" onclick="loadStatePage('OS');">Osun</a></li>
+                        <li><a href="#" onclick="loadStatePage('OY');">Oyo</a></li>
+                        <li><a href="#" onclick="loadStatePage('PL');">Plateau</a></li>
+                        <li><a href="#" onclick="loadStatePage('RI');">Rivers</a></li>
+                        <li><a href="#" onclick="loadStatePage('SO');">Sokoto</a></li>
+                        <li><a href="#" onclick="loadStatePage('TA');">Taraba</a></li>
+                        <li><a href="#" onclick="loadStatePage('YO');">Yobe</a></li>
+                        <li><a href="#" onclick="loadStatePage('ZA');">Zamfara</a></li>
                     </ul>
                 </li>
-                <li><a href="#">CONCERNS</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#" onclick="loadConcernsTemplate()">CONCERNS</a></li>
+                <li><a href="#" onclick="loadContactsTemplate()">CONTACT US</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MY ACCOUNT <span class="caret"></span></a>
                     <ul class="dropdown-menu" >
@@ -137,41 +215,8 @@
 </nav>
 
 <div  style="background-image: url(../images/home_bg.jpg);">
-
-    <div class="container-fluid" style="height: 350px;">
-        <div class="row">
-            <div class="col-md-12" >
-                <div class="row" >
-                    <div class="col-md-12 col-md-offset-1">
-                        <h2 style="float: left;"> About TSG</h2>
-                    </div>
-                </div>
-                <hr size="30">
-                <h4>We are an independent private company with the aim of creating a platform where Nigerian citizens can voice their opinion and objectively evaluate the performance of their elected officials (post-election) using a simple rating matrix. We believe better leaders are those that listen  to it peoples complains and opinions and those who will do what it takes to better the lives of its citizens while living up to promises made during election campaign.</h4>
-            </div>
-        </div>
+    <div id="activeTemplate">
     </div>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12" style="background-color: #0f3d3d;opacity: 0.9; padding-bottom: 2%;">
-                <div class="row placeholders" >
-                    <div class="col-md-3" style="color: white;">
-                        <h5 style="float: left;">Our Contact</h5></br>
-                        <h6 style="float: left;">E-mail: contact@thesmartgauge.net</h6></br>
-                        <a style="float: left;" href="contactus">Contact Form</a>
-                    </div>
-                    <div class="col-md-3" style="color: white;">
-                        <h5>Latest Tweets</h5>
-                    </div>
-                    <div class="col-md-6" style="color: white;">
-                        <h5>Latest News</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 
@@ -180,8 +225,6 @@
 <!-- Bootstrap core JavaScript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<asset:javascript src="jquery.js"/>
-<asset:javascript src="pulsone.js"/>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <asset:javascript src="bootstrap.min.js" />
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->

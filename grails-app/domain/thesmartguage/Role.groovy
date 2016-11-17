@@ -4,7 +4,8 @@ class Role {
 
     String description
     String type
-    String status
+    Boolean status
+//    static hasOne = [user: User]
 
     static constraints = {
     }
