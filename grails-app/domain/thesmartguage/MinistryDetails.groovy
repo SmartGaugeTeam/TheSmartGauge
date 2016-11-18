@@ -7,7 +7,7 @@ class MinistryDetails {
     String fullName
     String ministryDesignation
     String bio
-    String mandate
+    byte[] mandate
     String imageName
 
     static mapping = {

@@ -1,6 +1,7 @@
 package thesmartguage
 
 
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -11,7 +12,7 @@ class MinistryDetailsController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond MinistryDetails.list(params), model: [ministryDetailsInstanceCount: MinistryDetails.count()]
+        respond MinistryDetails.list(params), model:[ministryDetailsInstanceCount: MinistryDetails.count()]
     }
 
     def show(MinistryDetails ministryDetailsInstance) {
@@ -30,11 +31,11 @@ class MinistryDetailsController {
         }
 
         if (ministryDetailsInstance.hasErrors()) {
-            respond ministryDetailsInstance.errors, view: 'create'
+            respond ministryDetailsInstance.errors, view:'create'
             return
         }
 
-        ministryDetailsInstance.save flush: true
+        ministryDetailsInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
@@ -57,18 +58,18 @@ class MinistryDetailsController {
         }
 
         if (ministryDetailsInstance.hasErrors()) {
-            respond ministryDetailsInstance.errors, view: 'edit'
+            respond ministryDetailsInstance.errors, view:'edit'
             return
         }
 
-        ministryDetailsInstance.save flush: true
+        ministryDetailsInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'MinistryDetails.label', default: 'MinistryDetails'), ministryDetailsInstance.id])
                 redirect ministryDetailsInstance
             }
-            '*' { respond ministryDetailsInstance, [status: OK] }
+            '*'{ respond ministryDetailsInstance, [status: OK] }
         }
     }
 
@@ -80,14 +81,14 @@ class MinistryDetailsController {
             return
         }
 
-        ministryDetailsInstance.delete flush: true
+        ministryDetailsInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'MinistryDetails.label', default: 'MinistryDetails'), ministryDetailsInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action:"index", method:"GET"
             }
-            '*' { render status: NO_CONTENT }
+            '*'{ render status: NO_CONTENT }
         }
     }
 
@@ -97,7 +98,7 @@ class MinistryDetailsController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'ministryDetails.label', default: 'MinistryDetails'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*' { render status: NOT_FOUND }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

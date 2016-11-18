@@ -72,8 +72,6 @@
 				<li class="fieldcontain">
 					<span id="mandate-label" class="property-label"><g:message code="ministryDetails.mandate.label" default="Mandate" /></span>
 					
-						<span class="property-value" aria-labelledby="mandate-label"><g:fieldValue bean="${ministryDetailsInstance}" field="mandate"/></span>
-					
 				</li>
 				</g:if>
 			

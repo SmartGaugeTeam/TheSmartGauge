@@ -2,8 +2,8 @@ package thesmartguage
 
 class Comments {
 
-//    User user
-//    MinistryDetails minister
+    User user
+    MinistryDetails minister
     String comment
 
     static mapping = {

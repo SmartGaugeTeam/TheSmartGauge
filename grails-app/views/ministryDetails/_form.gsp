@@ -52,7 +52,7 @@
 		<g:message code="ministryDetails.mandate.label" default="Mandate" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="mandate" required="" value="${ministryDetailsInstance?.mandate}"/>
+	<input type="file" id="mandate" name="mandate" />
 
 </div>
 
