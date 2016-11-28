@@ -9,6 +9,11 @@ class MinistryDetails {
     String bio
     String mandate
     String imageName
+    String q1
+    String q2
+    String q3
+    String q4
+    String q5
 
     static mapping = {
         bio type: "text"

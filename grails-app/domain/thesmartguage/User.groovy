@@ -11,7 +11,7 @@ class User {
     String firstName
     String lastName
     String LGA
-    Date dob
+    String dob
     String webSite
     Role roleInstance
 

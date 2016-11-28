@@ -65,3 +65,48 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: ministryDetailsInstance, field: 'q1', 'error')} required">
+	<label for="q1">
+		<g:message code="ministryDetails.q1.label" default="Q1" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="q1" required="" value="${ministryDetailsInstance?.q1}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ministryDetailsInstance, field: 'q2', 'error')} required">
+	<label for="q2">
+		<g:message code="ministryDetails.q2.label" default="Q2" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="q2" required="" value="${ministryDetailsInstance?.q2}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ministryDetailsInstance, field: 'q3', 'error')} required">
+	<label for="q3">
+		<g:message code="ministryDetails.q3.label" default="Q3" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="q3" required="" value="${ministryDetailsInstance?.q3}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ministryDetailsInstance, field: 'q4', 'error')} required">
+	<label for="q4">
+		<g:message code="ministryDetails.q4.label" default="Q4" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="q4" required="" value="${ministryDetailsInstance?.q4}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ministryDetailsInstance, field: 'q5', 'error')} required">
+	<label for="q5">
+		<g:message code="ministryDetails.q5.label" default="Q5" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="q5" required="" value="${ministryDetailsInstance?.q5}"/>
+
+</div>
+

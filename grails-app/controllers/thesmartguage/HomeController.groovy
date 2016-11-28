@@ -9,8 +9,6 @@ import static org.springframework.http.HttpStatus.OK
 
 class HomeController {
 
-    def index() {}
-
     def templateModel(){
 
     }
@@ -25,7 +23,7 @@ class HomeController {
 
     def ministerTemplate(){
         //def mstName = params.mstName
-        //def ministerDetails = MinistryDetails.findByMinistryDesignation(MinistryConstants?.MD)//get(1);
+        //def ministerDetails = MinistryDetails.findByMinistryDesignation(smartGauge.MinistryConstants?.MD)//get(1);
         def ministerDetails = MinistryDetails.get(1);
         render(template: 'ministryPageTemplate', model:[md: ministerDetails])
     }

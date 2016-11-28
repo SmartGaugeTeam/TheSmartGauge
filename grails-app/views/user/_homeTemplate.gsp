@@ -26,19 +26,19 @@
         <div class="col-md-12">
             <div class="row placeholders" >
                 <div class="col-md-2">
-                    <img src="../images/opinoin.jpg" style="width: 200px;height: 200px;">
+                    <img class="img-circle" src="../images/opinoin.jpg" style="width: 200px;height: 200px;">
                 </div>
                 <div class="col-md-1">&nbsp;</div>
                 <div class="col-md-2">
-                    <img src="../images/signature.jpg" style="width: 200px;height: 200px;">
+                    <img class="img-circle" src="../images/signature.jpg" style="width: 200px;height: 200px;">
                 </div>
                 <div class="col-md-1">&nbsp;</div>
                 <div class="col-md-2">
-                    <img src="../images/how-it-works.png" style="width: 200px;height: 200px;">
+                    <img class="img-circle" src="../images/how-it-works.png" style="width: 200px;height: 200px;">
                 </div>
                 <div class="col-md-1">&nbsp;</div>
                 <div class="col-md-4">
-                    <img src="../images/politics.jpg">
+                    <img class="img-circle" src="../images/politics.jpg">
                 </div>
             </div>
         </div>
@@ -51,12 +51,12 @@
             <div class="row placeholders" >
                 <div class="col-sm-1 col-md-1">
                 </div>
-                <div class="col-sm-6 col-md-6" style="background-color: #196666;opacity: 0.9;">
-                    <h4 style="color: white;">How would you rate the present Economy?</h4>
-                    <h5 style="color: white;"><span style="float: left;">Terrible</span> <span style="float: right;">0/0</span></h5></br>
-                    <h5 style="color: white;"><span style="float: left;">Bad</span> <span style="float: right;">0/0</span></h5></br>
-                    <h5 style="color: white;"><span style="float: left;">Fair</span> <span style="float: right;">0/0</span></h5></br>
-                    <h5 style="color: white;"><span style="float: left;">Excellent</span> <span style="float: right;">0/0</span></h5></br>
+                <div class="col-sm-6 col-md-6" style="background-color: #e5e5e5;opacity: 0.9;border-radius: 5px;">
+                    <h4 style="color: black;">How would you rate the present Economy?</h4>
+                    <h5 style="color: black;"><span style="float: left;">Terrible</span> <span style="float: right;">0/0</span></h5></br>
+                    <h5 style="color: black;"><span style="float: left;">Bad</span> <span style="float: right;">0/0</span></h5></br>
+                    <h5 style="color: black;"><span style="float: left;">Fair</span> <span style="float: right;">0/0</span></h5></br>
+                    <h5 style="color: black;"><span style="float: left;">Excellent</span> <span style="float: right;">0/0</span></h5></br>
                 </div>
                 <div class="col-sm-5 col-md-5">
                 </div>
@@ -67,17 +67,17 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12" style="background-color: #145252;opacity: 0.9; padding-bottom: 2%;">
+        <div class="col-md-12" style="background-color: #e5e5e5;opacity: 0.9;border-radius: 5px;">
             <div class="row placeholders" >
-                <h2 style="color: white;">In Other News</h2>
+                <h2 style="color: black;">In Other News</h2>
             </div>
-            <div class="col-md-5" style="color: white;">
+            <div class="col-md-5" style="color: black;">
                 <h5>Police Smuggle Suspect-Officer In Roadside Killing Out Of LASUTH</h5>
             </div>
             <div class="col-md-2">
                 &nbsp;
             </div>
-            <div class="col-md-5" style="color: white;">
+            <div class="col-md-5" style="color: black;">
                 <h5>Police Smuggle Suspect-Officer In Roadside Killing Out Of LASUTH</h5>
             </div>
         </div>
@@ -94,18 +94,19 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12" style="background-color: #0f3d3d;opacity: 0.9; padding-bottom: 2%;">
+        <div class="col-md-12" style="background-color: #e5e5e5;opacity: 0.9;border-radius: 5px;padding-bottom: 2%;">
             <div class="row placeholders" >
-                <div class="col-md-3" style="color: white;">
-                    <h5 style="float: left;">Our Contact</h5></br>
-                    <h6 style="float: left;">E-mail: contact@thesmartgauge.net</h6></br>
+                <div class="col-md-3" style="color: black;">
+                    <span style="float: left;">Our Contact</span></br></br>
+                    <span style="float: left;">E-mail: contact@thesmartgauge.net</span></br>
                     <a style="float: left;" href="contactus">Contact Form</a>
                 </div>
-                <div class="col-md-3" style="color: white;">
-                    <h5>Latest Tweets</h5>
+                <div class="col-md-3" style="color: black;">
+                    <span style="float: left;">Latest Tweets</span><br/><br/>
+                    <span style="float: left;">Please configure widget options.</span><br/>
                 </div>
-                <div class="col-md-6" style="color: white;">
-                    <h5>Latest News</h5>
+                <div class="col-md-6" style="color: black;">
+                    <span style="float: left;">Latest News</span>
                 </div>
             </div>
         </div>

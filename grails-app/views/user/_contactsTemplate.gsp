@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12" >
             <div class="row" >
-                <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-12">
                     <h2 style="float: left;"> Contact Us</h2>
                 </div>
             </div>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-sm-12 col-md-12" >
             <div class="row" >
-                <div class="col-sm-12 col-md-12 jumbotron" style="margin-left: 20px;margin-right: 20px;">
+                <div class="col-sm-12 col-md-12 jumbotron" style="margin-left: 10%;width: 80%;">
                     <div class="col-md-1" >&nbsp;</div>
                     <div class="col-md-5" >
                         <h4>We are open to suggestions,feedback and Questions.</h4>

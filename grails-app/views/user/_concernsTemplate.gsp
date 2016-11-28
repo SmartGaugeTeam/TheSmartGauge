@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12" >
             <div class="row" >
-                <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-12">
                     <h2 style="float: left;"> Concerns</h2>
                 </div>
             </div>
@@ -15,12 +15,12 @@
     <div class="row">
         <div class="col-sm-12 col-md-12" >
             <div class="row" >
-                <div class="col-sm-12 col-md-12 jumbotron" style="margin-left: 20px;margin-right: 20px;">
+                <div class="col-sm-12 col-md-12 jumbotron" style="margin-left:10%;width: 80%;">
                     <legend>CONCERN SECTION</legend>
                     <h4>Please fill the form below with adequate details and we will verify accordingly and get back to you for further directives.</h4>
                     <h4>However, we do thorough check and verification to ascertain the authenticity of the information received for this reason it would take a period of 7-14 business days to get back to you on the next line of action.</h4>
                     <hr size="30">
-                    <a href="#">Click below to Fill and Submit the Concern Form</a></br>
+                    <a href="#">Click below to Fill and Submit the Concern Form</a></br></br>
                     <a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#concernForm" role="button">Concern Form</a>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     </div>
                     <input type="file" name="attachment" style="margin:10px;"/>
                     <div class="form-group">
-                        <button type="button" class="btn btn-default"> Send </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="validateConcerns()"> Send </button>
                     </div>
                 </form>
             </div>

@@ -2,6 +2,7 @@ package thesmartguage
 
 class StateDetails {
 
+    String stateName
     String firstName
     String lastName
     String fullName
@@ -9,6 +10,7 @@ class StateDetails {
     String bio
     String mandate
     String imageName
+    String partySymbol
 
     static mapping = {
         bio type: "text"

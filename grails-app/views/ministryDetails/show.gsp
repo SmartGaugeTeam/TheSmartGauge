@@ -86,6 +86,51 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${ministryDetailsInstance?.q1}">
+				<li class="fieldcontain">
+					<span id="q1-label" class="property-label"><g:message code="ministryDetails.q1.label" default="Q1" /></span>
+					
+						<span class="property-value" aria-labelledby="q1-label"><g:fieldValue bean="${ministryDetailsInstance}" field="q1"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ministryDetailsInstance?.q2}">
+				<li class="fieldcontain">
+					<span id="q2-label" class="property-label"><g:message code="ministryDetails.q2.label" default="Q2" /></span>
+					
+						<span class="property-value" aria-labelledby="q2-label"><g:fieldValue bean="${ministryDetailsInstance}" field="q2"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ministryDetailsInstance?.q3}">
+				<li class="fieldcontain">
+					<span id="q3-label" class="property-label"><g:message code="ministryDetails.q3.label" default="Q3" /></span>
+					
+						<span class="property-value" aria-labelledby="q3-label"><g:fieldValue bean="${ministryDetailsInstance}" field="q3"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ministryDetailsInstance?.q4}">
+				<li class="fieldcontain">
+					<span id="q4-label" class="property-label"><g:message code="ministryDetails.q4.label" default="Q4" /></span>
+					
+						<span class="property-value" aria-labelledby="q4-label"><g:fieldValue bean="${ministryDetailsInstance}" field="q4"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ministryDetailsInstance?.q5}">
+				<li class="fieldcontain">
+					<span id="q5-label" class="property-label"><g:message code="ministryDetails.q5.label" default="Q5" /></span>
+					
+						<span class="property-value" aria-labelledby="q5-label"><g:fieldValue bean="${ministryDetailsInstance}" field="q5"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:ministryDetailsInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

@@ -72,6 +72,16 @@
                contentType: 'application/json; charset=utf-8',
                 success: function(response){
                     $('#activeTemplate').html(response);
+                    var $log = $( "#minBio1" ),
+                            str = $( "#minBio1").text(),
+                            html = $.parseHTML( str );
+                    $( "#minBio1").text("");
+                    $log.append( html );
+                    var $log1 = $( "#minMandate" ),
+                            str1 = $( "#minMandate").text(),
+                            html1 = $.parseHTML( str1 );
+                    $( "#minMandate").text("");
+                    $log1.append( html1 );
                 }
             });
         }
@@ -96,17 +106,69 @@
             });
         }
 
-        function loadStatePage(){
+        function loadStatePage(stName){
             jQuery.ajax({
                 cache: false,
-                url: baseURL+'/user/stateTemplate',
+                url: baseURL+'/user/stateTemplate?stateName='+stName,
                 contentType: 'application/json; charset=utf-8',
                 success: function(response){
                     $('#activeTemplate').html(response);
+                    var $log2 = $( "#stateBio" ),str = $( "#stateBio").text(),html = $.parseHTML( str );
+                    $( "#stateBio").text("");
+                    $log2.append( html );
+                    var $log3 = $( "#stateMandate" ), str1 = $( "#stateMandate").text(), html1 = $.parseHTML( str1 );
+                    $( "#stateMandate").text("");
+                    $log3.append( html1 );
                 }
             });
         }
+    function userLogin(){
+        var formData = {userName:$("#user-name").val(),password:$("#password-text").val()};
+        $.ajax({
+            url : baseURL+"/user/userSystemLogin",
+            type: "POST",
+            data : formData,
+            success: function(data, textStatus, jqXHR)
+            {
+                alert(data);
+            }
+        });
+    }
+
+    function userRegistration(){
+        var formData = {userName: $("#reg-user-name").val(), phone: $("#reg-phone-name").val(), email: $("#email-text").val(), city: $("#city-text").val(), state: $("#state-text").val(), firstName: $("#firstname-text").val(), lga: $("#lga-text").val(), lastName: $("#lastname-text").val(), dob: $("#dob-text").val(), website: $("#website-text").val(), password: $("#reg-password-text").val()};
+        $.ajax({
+            url : baseURL+'/user/userSystemRegistration',
+            type: "POST",
+            data: formData,
+            success: function(data, textStatus, jqXHR)
+            {
+                alert(data);
+            }
+        })
+    }
+
     </script>
+    <style>
+    .successfully-saved.hide-opacity{
+        opacity: 0;
+    }
+
+    .img-circle {
+        border-radius: 50%;
+    }
+
+    .successfully-saved {
+        color: #FFFFFF;
+        text-align: center;
+
+        -webkit-transition: opacity 3s ease-in-out;
+        -moz-transition: opacity 3s ease-in-out;
+        -ms-transition: opacity 3s ease-in-out;
+        -o-transition: opacity 3s ease-in-out;
+        opacity: 1;
+    }
+    </style>
 </head>
 
 <body>
@@ -215,6 +277,7 @@
 </nav>
 
 <div  style="background-image: url(../images/home_bg.jpg);">
+    <p id="success" style="display: none">Successfullly Saved details...</p>
     <div id="activeTemplate">
     </div>
 </div>
@@ -247,8 +310,8 @@
     <div class="modal-dialog">
 
         <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal-content" style="margin-top: 15%;">
+            <div class="modal-header" style="background-color: #e5e5e5;border-radius: 5px;">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Login Form</h4>
             </div>
@@ -260,10 +323,10 @@
                     </div>
                     <div class="form-group">
                         <label for="password-text" class="control-label">Password:</label>
-                        <input type="text" class="form-control" id="password-text"/>
+                        <input type="password" class="form-control" id="password-text"/>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-default"> Login </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="userLogin();"> Login </button>
                     </div>
                 </form>
             </div>
@@ -400,7 +463,7 @@
 
 
                     <div class="form-group">
-                        <button type="button" class="btn btn-default"> Register </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="userRegistration();"> Register </button>
                     </div>
                 </form>
             </div>

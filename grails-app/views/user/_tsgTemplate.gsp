@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12" >
             <div class="row" >
-                <div class="col-md-12 col-md-offset-1">
+                <div class="col-md-12">
                     <h2 style="float: left;"> About TSG</h2>
                 </div>
             </div>
@@ -14,18 +14,19 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12" style="background-color: #0f3d3d;opacity: 0.9; padding-bottom: 2%;">
+        <div class="col-md-12" style="background-color: #e5e5e5;opacity: 0.9;border-radius: 5px;padding-bottom: 2%;">
             <div class="row placeholders" >
-                <div class="col-md-3" style="color: white;">
-                    <h5 style="float: left;">Our Contact</h5></br>
-                    <h6 style="float: left;">E-mail: contact@thesmartgauge.net</h6></br>
+                <div class="col-md-3" style="color: black;">
+                    <span style="float: left;">Our Contact</span></br></br>
+                    <span style="float: left;">E-mail: contact@thesmartgauge.net</span></br>
                     <a style="float: left;" href="contactus">Contact Form</a>
                 </div>
-                <div class="col-md-3" style="color: white;">
-                    <h5>Latest Tweets</h5>
+                <div class="col-md-3" style="color: black;">
+                    <span style="float: left;">Latest Tweets</span><br/><br/>
+                    <span style="float: left;">Please configure widget options.</span><br/>
                 </div>
-                <div class="col-md-6" style="color: white;">
-                    <h5>Latest News</h5>
+                <div class="col-md-6" style="color: black;">
+                    <span style="float: left;">Latest News</span>
                 </div>
             </div>
         </div>
