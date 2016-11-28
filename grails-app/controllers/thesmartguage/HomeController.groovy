@@ -9,6 +9,7 @@ import static org.springframework.http.HttpStatus.OK
 
 class HomeController {
 
+
     def templateModel(){
 
     }

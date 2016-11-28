@@ -1,5 +1,4 @@
 baseURL = "http://localhost:8080/theSmartGuage";
-
 function validateConcerns(){
     /*if ($('#user-name').val() && $('#user-email').val()){*/
         jQuery.ajax({
